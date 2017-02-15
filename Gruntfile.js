@@ -25,6 +25,10 @@ module.exports = function(grunt) {
     cleardist: {
       cmd: 'rm',
       args: ['-rf', 'dist']
+    },
+    start: {
+      cmd: 'node',
+      args: ['dist/src/app.js']
     }
   }
   });
@@ -35,5 +39,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('test', ['run:compileassets', 'run:compileapp', 'run:compiletest', 'mochacli', 'run:cleardist']);
+  grunt.registerTask('server', ['run:compileassets', 'run:compileapp', 'run:start']);
   grunt.registerTask('clear', ['run:cleardist']);
 };
