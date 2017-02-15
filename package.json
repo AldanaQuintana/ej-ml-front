@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build_tests": "babel --presets=es2015,react test -d dist/test",
-    "build_assets": "babel --presets=es2015 assets/javascripts -d dist/javascripts",
+    "build_assets": "babel --presets=es2015,react assets/javascripts -d dist/assets/javascripts",
     "build_app": "babel --presets=es2015 src -d dist/src && cp -r src/views dist/src/views"
   },
   "dependencies": {

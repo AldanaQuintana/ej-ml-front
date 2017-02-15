@@ -21,6 +21,10 @@ module.exports = function(grunt) {
     compileapp: {
       cmd: 'npm',
       args: ['run-script', 'build_app']
+    },
+    cleardist: {
+      cmd: 'rm',
+      args: ['-rf', 'dist']
     }
   }
   });
@@ -30,5 +34,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-run');
 
   // Default task(s).
-  grunt.registerTask('test', ['run:compileassets', 'run:compileapp', 'run:compiletest', 'mochacli']);
+  grunt.registerTask('test', ['run:compileassets', 'run:compileapp', 'run:compiletest', 'mochacli', 'run:cleardist']);
+  grunt.registerTask('clear', ['run:cleardist']);
 };
