@@ -7,12 +7,20 @@ module.exports = function(grunt) {
       options: {
         bail: false
       },
-      all: ['disttest/**/*.js']
+      all: ['dist/**/*.js']
     },
     run: {
     compiletest: {
       cmd: 'npm',
       args: ['run-script', 'build_tests']
+    },
+    compileassets: {
+      cmd: 'npm',
+      args: ['run-script', 'build_assets']
+    },
+    compileapp: {
+      cmd: 'npm',
+      args: ['run-script', 'build_app']
     }
   }
   });
@@ -22,5 +30,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-run');
 
   // Default task(s).
-  grunt.registerTask('test', ['run:compiletest', 'mochacli']);
+  grunt.registerTask('test', ['run:compileassets', 'run:compileapp', 'run:compiletest', 'mochacli']);
 };

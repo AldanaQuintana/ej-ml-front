@@ -4,7 +4,7 @@ const chai = require('chai'),
   should = chai.should(),
   chaiHttp = require('chai-http'),
   nock = require('nock'),
-  server = require('../../app'),
+  server = require('../../src/app'),
   searchResponses = require('../support/search_responses'),
   ML_API_BASE = 'https://api.mercadolibre.com';
 
