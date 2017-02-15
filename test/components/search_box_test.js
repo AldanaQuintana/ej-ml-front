@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import SearchBox from '../../assets/javascripts/components/SearchBox';
+import SearchBox from '../../src/components/SearchBox';
 const chai = require('chai'),
   expect = chai.expect;
 

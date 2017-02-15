@@ -6,10 +6,22 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+const Router = require('./routes');
 
 var app = express();
 
-const Router = require('./routes');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+Router.configure(app);
+
+app.set('port', 3000);
+app.set('host', 'localhost');
 
 
 // view engine setup
@@ -22,13 +34,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-sass-middleware')({
-  src: path.join(__dirname, 'assets/stylesheets'),
-  dest: path.join(__dirname, 'public'),
-  indentedSyntax: true,
-  sourceMap: true
-}));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/dist', express.static(path.join(__dirname, '../dist')));
+// app.use(express.static(path.join(__dirname, '../../public')));
 
 
 Router.configure(app);
@@ -53,4 +60,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-app.listen(3000);
+app.listen(app.get('port'), app.get('host'));
+
+console.log('Listening at http://localhost:3000');
