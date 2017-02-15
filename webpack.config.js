@@ -42,11 +42,13 @@ if(process.env.NODE_ENV === 'test'){
   };
 }else{
   module.exports = {
-    entry: './src/main.js',
+    entry: {
+      'bundle.js': './src/main.js'
+    },
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: 'bundle.js',
-      publicPath: '/dist/'
+      filename: '[name]',
+      publicPath: '/'
     },
       devServer: {
       hot: true,
