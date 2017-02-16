@@ -16,8 +16,7 @@ describe('SearchBox', () => {
     expect(searchBox.find("input[type='text'][name='search']")).to.have.length(1);
     expect(searchBox.find("input[type='text'][name='search']").props().value).to.eql('');
 
-    expect(searchBox.find("input[type='submit']")).to.have.length(1);
-    expect(searchBox.find("input[type='submit']").props().value).to.eql('Buscar');
+    expect(searchBox.find("button[type='submit']")).to.have.length(1);
   });
 
   describe('writing some input', () => {

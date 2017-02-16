@@ -15,7 +15,9 @@ class SearchBox extends React.Component{
   render(){
     return <form action='/items' method='get'>
             <input value={this.state.value} type='text' name='search' onChange={this.handleUserInput}/>
-            <input type='submit' value='Buscar'/>
+            <button type='submit'>
+              <div className="icon-search"></div>
+            </button>
           </form>;
   }
 }

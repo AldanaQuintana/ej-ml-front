@@ -4,5 +4,5 @@ import SearchBox from './components/SearchBox.jsx';
 
 ReactDOM.render(
   <SearchBox />,
-  document.getElementById("root")
+  document.getElementById("search-page")
 );
