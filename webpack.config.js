@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // env
 const buildDirectory = './dist/';
@@ -37,13 +38,13 @@ if(process.env.NODE_ENV === 'test'){
           presets: ['react', 'es2015', 'stage-0'],
         },
       }],
-    },
-    plugins: [],
+    }
   };
 }else{
   module.exports = {
     entry: {
-      'bundle.js': './src/main.js'
+      'bundle.js': './src/main.js',
+      'bundle.css': './src/styles/main.scss'
     },
     output: {
       path: path.resolve(__dirname, "dist"),
@@ -65,8 +66,16 @@ if(process.env.NODE_ENV === 'test'){
           query: {
             presets: ['es2015', 'react']
           }
+        },
+        {
+          test: /\.scss$/,
+          exclude: /node_modules/,
+          loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'], publicPath: '/' })
         }
-      ]
-    }
+      ],
+    },
+    plugins: [
+      new ExtractTextPlugin('bundle.css')
+    ]
   };
 }
