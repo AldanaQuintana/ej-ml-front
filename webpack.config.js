@@ -73,12 +73,9 @@ if(process.env.NODE_ENV === 'test'){
           exclude: /node_modules/,
           loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'], publicPath: '/' })
         },
-        // {
-        //   test: /\.(eot|svg|ttf|woff|woff2)(2)?(\?[a-z0-9]+)?$/,
-        //   loader: 'file?name=public/fonts/[name].[ext]'
-        // },
-        { test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|jpe?g|png|gif|ico)$/, loader: 'url?limit=10000&name=/src/styles/fonts/[name].[ext]' },
-        { test: /\.((ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9]))|(ttf|eot)$/, loader: 'file?name=/src/styles/fonts/[name].[ext]' }
+        { test: /\.((woff2?|svg)(\?v=[0-9]\.[0-9]\.[0-9]))|(woff2?|svg|ico)$/, loader: 'url?limit=10000&name=/src/styles/fonts/[name].[ext]' },
+        { test: /\.((ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9]))|(ttf|eot)$/, loader: 'file?name=/src/styles/fonts/[name].[ext]' },
+        { test: /\.(jpe?g|png|gif)$/, loader: 'file?name=/src/images/[name].[ext]'}
       ],
     },
     plugins: [
