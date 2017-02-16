@@ -1,0 +1,28 @@
+#search-form {
+  text-align: center;
+}
+
+#search-form input[type='text'], #search-form button {
+  border: 1px solid $border-color;
+  height: 40px;
+}
+
+#search-form input[type='text'] {
+  border-radius: $border-radius 0px 0px $border-radius;
+  font-size: $md-font-size;
+  padding: 8px 31px 10px 31px;
+  width: 70%;
+}
+
+#search-form button {
+  position: absolute;
+  border-radius: 0px $border-radius $border-radius 0px;
+  padding: 0 14px;
+  color: $btn-gray-color;
+  font-size: $sm-font-size;
+  cursor: pointer;
+}
+
+#home-page #search-form{
+  margin-top: 40vh;
+}

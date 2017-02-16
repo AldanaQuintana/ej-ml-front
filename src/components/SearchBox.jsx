@@ -13,8 +13,8 @@ class SearchBox extends React.Component{
   }
 
   render(){
-    return <form action='/items' method='get'>
-            <input value={this.state.value} type='text' name='search' onChange={this.handleUserInput}/>
+    return <form action='/items' method='get' id="search-form">
+            <input value={this.state.value} type='text' name='search' onChange={this.handleUserInput} placeholder="Nunca dejes de buscar"/>
             <button type='submit'>
               <div className="icon-search"></div>
             </button>
