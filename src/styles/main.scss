@@ -16,7 +16,7 @@
 }
 
 .container {
-  @include breakpoint(tablet){
+  @include breakpoint(notebook){
     margin: 10px 10%;
   }
 }

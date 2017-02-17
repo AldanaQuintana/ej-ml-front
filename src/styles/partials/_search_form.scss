@@ -2,27 +2,36 @@
   text-align: center;
   margin-top: 70px;
   width: 100%;
-  height: 45px;
   display: flex;
   justify-content: center;
+  height: 70px;
+
+  @include breakpoint(notebook){
+    height: 50px;
+  }
 }
 
 #search-form input[type='text'], #search-form button {
   border: 1px solid $border-color;
   height: 100%;
-
-  @include breakpoint(notebook){
-    height: 40px;
-  }
 }
 
 #search-form input[type='text'] {
   border-radius: $border-radius 0px 0px $border-radius;
-  padding: 8px 31px 10px 31px;
   width: 80%;
+  padding: 8px 31px 10px 31px;
   font-size: $lg-font-size;
 
+  @include breakpoint(tablet){
+    width: 85%;
+    font-size: $lgr-font-size;
+  }
+
   @include breakpoint(notebook){
+    font-size: $lg-font-size;
+  }
+
+  @include breakpoint(desktop){
     width: 70%;
     font-size: $md-font-size;
   }
@@ -30,12 +39,27 @@
 
 #search-form button {
   border-radius: 0px $border-radius $border-radius 0px;
-  padding: 0 14px;
+  width: 15%;
   color: $btn-gray-color;
   cursor: pointer;
-  font-size: $lg-font-size;
 
   @include breakpoint(tablet){
+    width: 10%;
+  }
+
+  @include breakpoint(desktop){
+    width: 4%;
+  }
+}
+
+#search-form button .icon-search{
+  font-size: $md-font-size;
+
+  @include breakpoint(tablet){
+    font-size: $lg-font-size;
+  }
+
+  @include breakpoint(desktop){
     font-size: $sm-font-size;
   }
 }
