@@ -28,4 +28,26 @@ describe('SearchBox', () => {
       expect(searchBox.find("input[type='text'][name='search']").props().value).to.eql('a');
     });
   });
+
+  describe('submitting the form', () => {
+    describe('when there is no text in the input', () => {
+      const searchBox = shallow(<SearchBox />);
+      const fakeSubmitEvent = { preventDefault: function(){} };
+      searchBox.find("form").first().simulate('submit', fakeSubmitEvent);
+
+      expect(searchBox.find("input[type='text'][name='search']").hasClass('active-tooltip')).to.eql(true);
+    });
+
+    describe('when there is text in the input', () => {
+      const searchBox = shallow(<SearchBox />);
+
+      const fakeInputEvent = {target: { value: 'a'}};
+      searchBox.instance().handleUserInput(fakeInputEvent);
+
+      const fakeSubmitEvent = { preventDefault: function(){} };
+      searchBox.find("form").first().simulate('submit', fakeSubmitEvent);
+
+      expect(searchBox.find("input[type='text'][name='search']").hasClass('active-tooltip')).to.eql(false);
+    });
+  });
 });
