@@ -1,5 +1,9 @@
-.logo-picture-container {
-  display: inline-block;
+.lg-logo-container.image-only {
+  display: block;
   overflow: hidden;
-  width: 66px;
+  height: 113px;
+}
+
+.lg-logo-container.image-only .logo{
+  width: 250px;
 }

@@ -1,5 +1,6 @@
 #search-form {
   text-align: center;
+  margin-top: 7vh;
 }
 
 #search-form input[type='text'], #search-form button {
@@ -23,10 +24,6 @@
   cursor: pointer;
 }
 
-#home-page #search-form{
-  margin-top: 40vh;
-}
-
 #search-form .tooltip {
-  right: 25vw;
+  right: 26.5vw;
 }
