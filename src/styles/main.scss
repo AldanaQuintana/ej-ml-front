@@ -1,5 +1,6 @@
 @import "variables";
 
+@import "partials/mixins";
 @import "partials/icons";
 @import "partials/forms";
 @import "partials/buttons";
@@ -14,22 +15,10 @@
   font-size: $base-font-size;
 }
 
-input[type="submit"] {
-  color: red;
-}
-
 .container {
-  margin: 10px 10%;
-  height: 100%;
-}
-
-body {
-  position: absolute;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  @include breakpoint(tablet){
+    margin: 10px 10%;
+  }
 }
 
 body#root {

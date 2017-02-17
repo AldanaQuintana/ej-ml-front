@@ -4,5 +4,9 @@
 }
 
 #search-page .logo{
-  width: 250px;
+  width: 200px;
+
+  @include breakpoint(tablet){
+    width: 250px;
+  }
 }
