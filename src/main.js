@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SearchBox from './components/SearchBox.jsx';
+import SearchPageApp from './components/SearchPageApp.jsx';
 
 ReactDOM.render(
-  <SearchBox />,
+  <SearchPageApp />,
   document.getElementById("search-page")
 );
