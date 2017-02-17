@@ -35,7 +35,7 @@ describe('SearchBox', () => {
       const fakeSubmitEvent = { preventDefault: function(){} };
       searchBox.find("form").first().simulate('submit', fakeSubmitEvent);
 
-      expect(searchBox.find("input[type='text'][name='search']").hasClass('active-tooltip')).to.eql(true);
+      expect(searchBox.find("button[type='submit']").hasClass('active-tooltip')).to.eql(true);
     });
 
     describe('when there is text in the input', () => {
@@ -47,7 +47,7 @@ describe('SearchBox', () => {
       const fakeSubmitEvent = { preventDefault: function(){} };
       searchBox.find("form").first().simulate('submit', fakeSubmitEvent);
 
-      expect(searchBox.find("input[type='text'][name='search']").hasClass('active-tooltip')).to.eql(false);
+      expect(searchBox.find("button[type='submit']").hasClass('active-tooltip')).to.eql(false);
     });
   });
 });

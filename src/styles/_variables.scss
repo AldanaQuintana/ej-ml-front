@@ -8,7 +8,10 @@ $btn-gray-bkg-color: darken(#dddddd, 10%);
 $btn-gray-color: darken($btn-gray-bkg-color, 35%);
 
 $white: #FFFFFF;
-
+$black: #000;
+$light-gray: #dddddd;
+$gray: darken($light-gray, 10%);
+$dark-gray: darken($gray, 35%);
 
 // Input properties
 $border-radius: 2px;
