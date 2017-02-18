@@ -1,5 +1,5 @@
 const express = require('express'),
-  homeRouter = require('./api/home_router'),
+  homeRouter = require('./home_router'),
   itemsRouter = require('./api/items_router')
 
 class Router {

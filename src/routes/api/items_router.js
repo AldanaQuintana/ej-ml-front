@@ -1,6 +1,6 @@
 const express = require('express'),
   router = express.Router(),
-  itemsController = require('../../controllers/items_controller');
+  itemsController = require('../../controllers/api_items_controller');
 
 /* GET /api/items */
 router.get('/', itemsController.index);
