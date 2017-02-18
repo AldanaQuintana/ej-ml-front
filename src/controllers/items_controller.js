@@ -1,5 +1,4 @@
-const request = require('request'),
-  apiItemsController = require('')
+const request = require('request');
 
 class ItemsController {
   static index(req, res){
