@@ -101,7 +101,7 @@ const _parseSingleItemWithDesc = (itemData, descData) => {
 
 //--- Controller -------
 
-class ItemsController {
+class ApiItemsController {
   static index(req, res){
     let query = req.query.q;
     if ( !query ){ res.sendStatus(422); return; };
@@ -129,4 +129,4 @@ class ItemsController {
 }
 
 
-module.exports = ItemsController;
+module.exports = ApiItemsController;
