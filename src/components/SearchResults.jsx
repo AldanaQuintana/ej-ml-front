@@ -11,7 +11,11 @@ class SearchResults extends React.Component{
     if(content.length === 0 && !loading){
       content = <div className='no-results-text'>No hay resultados para la búsqueda</div>
     } else if(loading){
-      content = <div className='loading-indicator'></div>;
+      content = <div className='loading-indicator center-vh'>
+        <div className="bounce1"></div>
+        <div className="bounce2"></div>
+        <div className="bounce3"></div>
+      </div>;
     }
 
     return <div>
