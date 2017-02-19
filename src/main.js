@@ -11,7 +11,7 @@ const searchQuery = window.location.search;
 let searchParam = '';
 if ( searchRegex.test(searchQuery) ){
   searchParam = searchQuery.match(searchRegex,'')[2];
-  searchParam = searchParam.split("+").join(" ");
+  searchParam = decodeURIComponent(searchParam.split("+").join(" "));
 }
 
 const apps = {
