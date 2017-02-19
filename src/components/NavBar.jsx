@@ -5,7 +5,7 @@ import Image from './Image.jsx';
 class NavBar extends React.Component{
   render(){
     return <div>
-      <Image src="/logo-small-img.png" />
+      <Image src="/src/images/logo-small-img.png" />
       <SearchBox value={this.props.value} />
     </div>;
   }
