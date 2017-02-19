@@ -4,15 +4,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var ECT = require('ect');
+var ectRenderer = ECT({ watch: true, root: path.join(__dirname, '/views'), ext : '.ect' });
 
 var index = require('./routes/index');
 const Router = require('./routes');
 const EnvConfiguration = require('./config/env_configuration');
 
 var app = express();
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -24,10 +23,10 @@ Router.configure(app);
 app.set('port', 3000);
 app.set('host', 'localhost');
 
-
-// view engine setup
+// View engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ect');
+app.engine('ect', ectRenderer.render);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
