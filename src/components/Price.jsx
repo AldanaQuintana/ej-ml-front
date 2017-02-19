@@ -8,13 +8,22 @@ class Price extends React.Component{
     const currency = '$';
     const strAmount = value.amount.toString();
 
-    let amount = `${strAmount[0]}.${strAmount.slice(1, value.decimals + 1)}`;
+    let amount = `${strAmount[0]}.${strAmount.slice(1,  4)}`;
 
     return `${currency} ${amount}`;
   }
 
   render(){
-    return <div className="price">{this.formattedPrice()}</div>;
+    let decimals = '';
+
+    if (this.props.showDecimals) {
+      decimals = <div className="decimals">{this.props.value.decimals}</div>
+    }
+
+    return <div className="price-group">
+      <div className="price">{this.formattedPrice()}</div>
+      { decimals }
+    </div>;
   }
 }
 
