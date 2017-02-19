@@ -7,6 +7,22 @@ import 'whatwg-fetch';
 
 const displayResultsLimit = 4;
 
+const removeAccents = (strAccents) => {
+  var strAccents = strAccents.split('');
+  var strAccentsOut = new Array();
+  var strAccentsLen = strAccents.length;
+  var accents = 'ÀÁÂÃÄÅàáâãäåÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+  var accentsOut = "AAAAAAaaaaaaOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
+  for (var y = 0; y < strAccentsLen; y++) {
+    if (accents.indexOf(strAccents[y]) != -1) {
+      strAccentsOut[y] = accentsOut.substr(accents.indexOf(strAccents[y]), 1);
+    } else
+      strAccentsOut[y] = strAccents[y];
+  }
+  strAccentsOut = strAccentsOut.join('');
+  return strAccentsOut;
+}
+
 class ResultsPageApp extends React.Component{
   constructor(props){
     super(props);
@@ -14,7 +30,9 @@ class ResultsPageApp extends React.Component{
   }
 
   componentDidMount(){
-    fetch(`/api/items?q=${this.props.value}&limit=${displayResultsLimit}`)
+    let encodedValue = removeAccents(this.props.value);
+
+    fetch(`/api/items?q=${encodedValue}&limit=${displayResultsLimit}`)
       .then((response) => {
         return response.json();
       }).then((json) => {
@@ -25,7 +43,7 @@ class ResultsPageApp extends React.Component{
   render(){
     const categoriesToDisplay = _.take(this.state.categories, 4);
     const breadCrumbs = _.map(categoriesToDisplay, (category) => {
-        return <div className="category">{category}</div>;
+        return <div className="category" key={category}>{category}</div>;
       });
 
     return <span>
