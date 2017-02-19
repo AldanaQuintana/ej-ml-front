@@ -21,7 +21,14 @@
   }
 }
 
-body#root {
+body {
+  margin: 0;
+}
+
+body#home-page-layout {
   background-color: $primary;
 }
 
+body#main-layout {
+  background-color: $background-color;
+}
