@@ -5,7 +5,7 @@ import SearchResults from './SearchResults.jsx';
 
 class ResultsPageApp extends React.Component{
   render(){
-    return <span> <NavBar /> <SearchBox value={this.props.value} /> <SearchResults /></span>;
+    return <span> <NavBar value={this.props.value}/> <SearchResults /></span>;
   }
 }
 
