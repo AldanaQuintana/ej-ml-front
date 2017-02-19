@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 import ResultsPageApp from '../../src/components/ResultsPageApp';
 const chai = require('chai'),
   expect = chai.expect;
@@ -7,8 +7,9 @@ const chai = require('chai'),
 
 describe('ResultsPageApp', () => {
   it('', () => {
-    const resultsPageApp = shallow(<ResultsPageApp value='asus tablet'/>);
+    const resultsPageApp = mount(<ResultsPageApp value='asus tablet'/>);
 
     expect(resultsPageApp.find("SearchBox")).to.have.length(1);
+    expect(resultsPageApp.find("input[type='text'][name='search']").props().value).to.eql('asus tablet');
   });
 });

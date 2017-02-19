@@ -1,8 +1,7 @@
 <% extend 'layouts/app_layout' %>
 <% block 'body': %>
   <body id="main-layout">
-    <div class="container">
-      <script src="http://localhost:8080/bundle.js"></script>
-    </div>
+    <% content %>
+    <script src="http://localhost:8080/bundle.js"></script>
   </body>
 <% end %>

@@ -3,7 +3,7 @@ import SearchBox from './SearchBox.jsx';
 
 class ResultsPageApp extends React.Component{
   render(){
-    return <span> <SearchBox /> </span>;
+    return <span> <SearchBox value={this.props.value} /> </span>;
   }
 }
 
