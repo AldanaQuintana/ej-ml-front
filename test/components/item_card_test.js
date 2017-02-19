@@ -22,6 +22,8 @@ describe('ItemCard', () => {
     it('', () => {
       const itemCard = shallow(<ItemCard item={item} />);
 
+      expect(itemCard.find("a[href='/items/MLA621653626']")).to.have.length(1);
+
       expect(itemCard.find("img")).to.have.length(1);
       expect(itemCard.find("img").props().src).to.eql(item.picture);
 
@@ -42,6 +44,8 @@ describe('ItemCard', () => {
 
     it('', () => {
       const itemCard = shallow(<ItemCard item={item} />);
+
+      expect(itemCard.find("a[href='/items/MLA621653626']")).to.have.length(1);
 
       expect(itemCard.find("img")).to.have.length(1);
       expect(itemCard.find("img").props().src).to.eql(item.picture);
