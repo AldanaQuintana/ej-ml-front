@@ -1,0 +1,9 @@
+<% extend 'layouts/app_layout' %>
+<% block 'body': %>
+  <body id="home-page-layout">
+    <div class="container">
+      <% content %>
+      <script src="<%= process.env.ASSET_HOST + '/bundle.js' %>"></script>
+    </div>
+  </body>
+<% end %>
