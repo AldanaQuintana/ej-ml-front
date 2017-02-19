@@ -2,8 +2,7 @@ const request = require('request'),
   ML_API_BASE = 'https://api.mercadolibre.com',
   _ = require('lodash');
 
-const PRICE_DECIMALS = "00",
- AUTHOR_NAME = "Aldana Laura",
+const AUTHOR_NAME = "Aldana Laura",
  AUTHOR_LAST_NAME = "Quintana Munilla";
 
 const _parseItem = (itemData) => {
@@ -13,8 +12,8 @@ const _parseItem = (itemData) => {
   parsedItem.title = itemData.title;
   parsedItem.price = {
     "currency": itemData.currency_id,
-    "amount": itemData.price,
-    "decimals": PRICE_DECIMALS
+    "amount": parseInt(itemData.price),
+    "decimals": parseInt(itemData.price.toString().split(".")[1]) || 0
   };
   parsedItem.picture = itemData.thumbnail;
   parsedItem.condition = itemData.condition;

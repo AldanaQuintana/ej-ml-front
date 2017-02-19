@@ -24,7 +24,7 @@ class SearchResponses {
                   "real_estate_agency": false,
                   "tags": []
               },
-              "price": 1690,
+              "price": 1690.99,
               "currency_id": "ARS",
               "available_quantity": 15,
               "sold_quantity": 173,
@@ -818,7 +818,7 @@ class SearchResponses {
                   "real_estate_agency": false,
                   "tags": []
               },
-              "price": 1690,
+              "price": 1690.99,
               "currency_id": "ARS",
               "available_quantity": 15,
               "sold_quantity": 173,
