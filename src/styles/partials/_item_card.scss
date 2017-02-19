@@ -1,0 +1,35 @@
+.item-card {
+  position: relative;
+  padding: 10px;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+
+  display: flex;
+}
+
+.item-card .desc-column {
+  padding: 10px;
+}
+
+.item-card .desc-column .price {
+  display: inline-block;
+  font-size: $lg-font-size;
+}
+
+.item-card .desc-column .icon-truck {
+  display: inline-block;
+  margin-left: 10px;
+  color: $white;
+  text-align: center;
+  @include circle(25px, $green);
+  padding: 4px;
+  font-size: $base-font-size;
+}
+
+.item-card img {
+  width: 160px;
+}
+
+.item-card .title {
+  margin-top: 7px;
+}

@@ -6,3 +6,11 @@
 .loading-indicator.center-vh {
   margin-top: 30vh;
 }
+
+.items-results {
+  margin: 10px 0;
+
+  @include breakpoint(tablet){
+    margin: 10px 15%;
+  }
+}

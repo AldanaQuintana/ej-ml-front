@@ -18,7 +18,7 @@ class SearchResults extends React.Component{
       </div>;
     }
 
-    return <div>
+    return <div className="items-results">
       { content }
     </div>;
   }

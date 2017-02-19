@@ -8,11 +8,15 @@ class ItemCard extends React.Component{
 
     const freeShippingIndicator = item.free_shipping ? <div className="icon-truck"></div> : '';
 
-    return <div>
-      <img src={item.picture} />
-      <Price value={item.price}/>
-      { freeShippingIndicator }
-      <div className='title'>{item.title}</div>
+    return <div className="item-card">
+      <div className="img-column">
+        <img src={item.picture} />
+      </div>
+      <div className="desc-column">
+        <Price value={item.price}/>
+        { freeShippingIndicator }
+        <div className='title'>{item.title}</div>
+      </div>
     </div>;
   }
 }
