@@ -7,10 +7,18 @@
   margin-top: 30vh;
 }
 
-.items-results, .category-breadcrumbs {
+.items-results {
   margin: 15px 0;
 
-  @include breakpoint(tablet){
+  @include breakpoint(notebook){
+    margin: 15px 20%;
+  }
+}
+
+.category-breadcrumbs {
+  margin: 15px 5px;
+
+  @include breakpoint(notebook){
     margin: 15px 20%;
   }
 }
