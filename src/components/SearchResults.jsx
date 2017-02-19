@@ -5,7 +5,7 @@ class SearchResults extends React.Component{
   render(){
     const loading = this.props.loading;
     let content = this.props.items.map((item) => {
-      return <ItemCard item={item} />;
+      return <ItemCard item={item} key={item.id}/>;
     });
 
     if(content.length === 0 && !loading){
