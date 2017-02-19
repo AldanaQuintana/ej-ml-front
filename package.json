@@ -5,7 +5,7 @@
   "scripts": {
     "test": "NODE_ENV=test mocha -w test/helpers/browser.js test/**/*_test.js",
     "dev:hot": "webpack-dev-server  --hot --inline",
-    "server": "NODE_ENV development"
+    "server": "NODE_ENV=development node ./src/app"
   },
   "dependencies": {
     "babel-core": "^6.23.1",
@@ -32,6 +32,7 @@
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "css-loader": "^0.26.1",
+    "dotenv-webpack": "^1.4.1",
     "enzyme": "^2.7.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.10.0",

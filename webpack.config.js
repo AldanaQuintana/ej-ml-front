@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // env
 const buildDirectory = './dist/';
+const Dotenv = require('dotenv-webpack');
 
 
 // ------ working for npm test---------
@@ -79,7 +80,8 @@ if(process.env.NODE_ENV === 'test'){
       ],
     },
     plugins: [
-      new ExtractTextPlugin('bundle.css')
+      new ExtractTextPlugin('bundle.css'),
+      new Dotenv( { path: './.env.development'} )
     ]
   };
 }
