@@ -7,10 +7,15 @@ class Price extends React.Component{
 
     const currency = '$';
     const strAmount = value.amount.toString();
+    const reversed = strAmount.split("").reverse();
 
-    let amount = `${strAmount[0]}.${strAmount.slice(1,  4)}`;
+    let amountAry = [];
 
-    return `${currency} ${amount}`;
+    for (var i = 0; i < reversed.length; i+=3) {
+      amountAry.push([reversed[i + 2], reversed[i + 1], reversed[i]].join(""));
+    }
+
+    return `${currency} ${amountAry.reverse().join(".")}`;
   }
 
   render(){
