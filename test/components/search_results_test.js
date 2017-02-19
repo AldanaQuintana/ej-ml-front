@@ -28,20 +28,32 @@ const itemsResult = [{"id": "MLA621653626",
 
 
 describe('SearchResults', () => {
-  describe('when there are no results', () => {
+  describe('when there are no results and it\'s not loading', () => {
     it('', () => {
-      const searchResults = shallow(<SearchResults items={[]}/>);
+      const searchResults = shallow(<SearchResults items={[]} loading={false}/>);
 
       expect(searchResults.find("ItemCard")).to.have.length(0);
+      expect(searchResults.find('.loading-indicator')).to.have.length(0);
       expect(searchResults.find('.no-results-text').text()).to.eql('No hay resultados para la búsqueda');
+    });
+  });
+
+  describe('when there are no results but it\'s loading', () => {
+    it('', () => {
+      const searchResults = shallow(<SearchResults items={[]} loading={true}/>);
+
+      expect(searchResults.find("ItemCard")).to.have.length(0);
+      expect(searchResults.find('.no-results-text')).to.have.length(0);
+      expect(searchResults.find('.loading-indicator')).to.have.length(1);
     });
   });
 
   describe('when there are results', () => {
     it('', () => {
-      const searchResults = shallow(<SearchResults items={itemsResult}/>);
+      const searchResults = shallow(<SearchResults items={itemsResult} loading={false}/>);
 
       expect(searchResults.find("ItemCard")).to.have.length(2);
+      expect(searchResults.find('.loading-indicator')).to.have.length(0);
       expect(searchResults.find('.no-results-text')).to.have.length(0);
     });
   });

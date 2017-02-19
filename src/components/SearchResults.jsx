@@ -3,12 +3,15 @@ import ItemCard from './ItemCard.jsx';
 
 class SearchResults extends React.Component{
   render(){
+    const loading = this.props.loading;
     let content = this.props.items.map((item) => {
       return <ItemCard item={item} />;
     });
 
-    if(content.length === 0){
+    if(content.length === 0 && !loading){
       content = <div className='no-results-text'>No hay resultados para la búsqueda</div>
+    } else if(loading){
+      content = <div className='loading-indicator'></div>;
     }
 
     return <div>
