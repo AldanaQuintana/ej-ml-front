@@ -1,0 +1,47 @@
+.navbar{
+  background-color: $primary;
+  height: $nav-bar-height;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
+}
+
+.navbar .logo {
+  position: relative;
+  top: 14px;
+  display: none;
+  max-height: 40px;
+  margin-right: 20px;
+
+ @include breakpoint(tablet) {
+  display: inline-block;
+ }
+}
+
+.navbar .form-container {
+  display: inline-block;
+  width: 90%;
+
+  @include breakpoint(tablet) {
+    width: 65%;
+  }
+}
+
+.navbar .form-container form#search-form{
+  margin: 0;
+  max-height: 55px;
+  width: 100%;
+  justify-content: flex-start;
+
+  @include breakpoint(tablet){
+    margin: 10px 0px;
+  }
+}
+
+.navbar .form-container form#search-form input[type='text']{
+  width: 90%;
+}
