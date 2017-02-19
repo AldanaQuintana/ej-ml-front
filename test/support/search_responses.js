@@ -286,7 +286,19 @@ class SearchResponses {
             ]
           }
         ]
-      }],
+      },
+      {
+      "id": "99932089-AMLA_32089_2",
+      "name": "Capacidad",
+      "type": "text",
+      "values": [
+        {
+          "id": "99932089-AMLA_32089_2-MMLA43896",
+          "name": "32GB"
+        }
+      ]
+    }
+     ],
       "available_filters": [
           {
               "id": "category",
@@ -1128,7 +1140,17 @@ class SearchResponses {
             ]
           }
         ]
-      }],
+      }, {
+      "id": "99932089-AMLA_32089_2",
+      "name": "Capacidad",
+      "type": "text",
+      "values": [
+        {
+          "id": "99932089-AMLA_32089_2-MMLA43896",
+          "name": "32GB"
+        }
+      ]
+    }],
       "available_filters": [
           {
               "id": "category",

@@ -57,7 +57,7 @@ describe('GET /api/items?q=:query', () => {
               "lastname": "Quintana Munilla"
             },
             "categories": [
-              "Electrónica", "iPod"
+              "Electrónica", "iPod", "32GB"
             ],
             "items": [
               {
@@ -157,7 +157,7 @@ describe('GET /api/items?q=:query', () => {
               "lastname": "Quintana Munilla"
             },
             "categories": [
-              "Electrónica", "iPod"
+              "Electrónica", "iPod", "32GB"
             ],
             "items": [
               {

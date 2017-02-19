@@ -41,8 +41,7 @@ class ResultsPageApp extends React.Component{
   }
 
   render(){
-    const categoriesToDisplay = _.take(this.state.categories, 4);
-    const breadCrumbs = _.map(categoriesToDisplay, (category) => {
+    const breadCrumbs = _.map(this.state.categories, (category) => {
         return <div className="category" key={category}>{category}</div>;
       });
 

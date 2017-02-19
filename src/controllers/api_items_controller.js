@@ -70,23 +70,25 @@ class ResponseDataBuilder {
   };
 };
 
-const _withinCategoryFilter = (data, callback) => {
-  return callback(_.find(data.filters, (f) => { return f.id === 'category'; } ) || {});
-}
-
-const _mapCategoryFilters = (categoryFilters) => {
-  const filters = _.map(categoryFilters.values, (f) => {
-    return _.map(f.path_from_root, (category) => {
-      return category.name;
+const _withinInnerFilter = (data, callback) => {
+  const innerFilters = _.map(data.filters, (f) => {
+    return _.map(f.values, (val) => {
+      return val.path_from_root ? val.path_from_root : val;
     });
   });
 
-  return _.flatten(filters);
+  return callback(_.flattenDeep(innerFilters));
+}
+
+const _mapFilters = (filters) => {
+  return _.map(filters, (f) => {
+    return f.name;
+  });
 }
 
 const _getCategories = (data) => {
-  return _withinCategoryFilter(data, function(categoryFilters){
-    return _mapCategoryFilters(categoryFilters || []);
+  return _withinInnerFilter(data, function(values){
+    return _mapFilters(values);
   });
 };
 
