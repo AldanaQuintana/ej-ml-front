@@ -6,17 +6,35 @@ const chai = require('chai'),
 
 
 describe('SearchBox', () => {
-  it('renders the form', () =>{
-    const searchBox = shallow(<SearchBox />);
 
-    expect(searchBox.find("form")).to.have.length(1);
-    expect(searchBox.find("form").props().action).to.eql('/items');
-    expect(searchBox.find("form").props().method).to.eql('get');
+  describe('without any value on props', () => {
+    it('renders the form', () =>{
+      const searchBox = shallow(<SearchBox />);
 
-    expect(searchBox.find("input[type='text'][name='search']")).to.have.length(1);
-    expect(searchBox.find("input[type='text'][name='search']").props().value).to.eql('');
+      expect(searchBox.find("form")).to.have.length(1);
+      expect(searchBox.find("form").props().action).to.eql('/items');
+      expect(searchBox.find("form").props().method).to.eql('get');
 
-    expect(searchBox.find("button[type='submit']")).to.have.length(1);
+      expect(searchBox.find("input[type='text'][name='search']")).to.have.length(1);
+      expect(searchBox.find("input[type='text'][name='search']").props().value).to.eql('');
+
+      expect(searchBox.find("button[type='submit']")).to.have.length(1);
+    });
+  });
+
+  describe('initializing it with values on props', () => {
+    it('renders the form prefilling the value', () =>{
+      const searchBox = shallow(<SearchBox value="camara" />);
+
+      expect(searchBox.find("form")).to.have.length(1);
+      expect(searchBox.find("form").props().action).to.eql('/items');
+      expect(searchBox.find("form").props().method).to.eql('get');
+
+      expect(searchBox.find("input[type='text'][name='search']")).to.have.length(1);
+      expect(searchBox.find("input[type='text'][name='search']").props().value).to.eql('camara');
+
+      expect(searchBox.find("button[type='submit']")).to.have.length(1);
+    });
   });
 
   describe('writing some input', () => {

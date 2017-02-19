@@ -3,7 +3,7 @@ import React from 'react';
 class SearchBox extends React.Component{
   constructor(props){
     super(props);
-    this.state = {value: '', buttonClass: ''};
+    this.state = {value: props.value || '', buttonClass: ''};
 
     this.handleUserInput = this.handleUserInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
