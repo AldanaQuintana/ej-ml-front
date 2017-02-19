@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "test": "NODE_ENV=test mocha -w test/helpers/browser.js test/**/*_test.js",
-    "dev:hot": "webpack-dev-server  --hot --inline"
+    "dev:hot": "webpack-dev-server  --hot --inline",
+    "server": "NODE_ENV development"
   },
   "dependencies": {
     "babel-core": "^6.23.1",

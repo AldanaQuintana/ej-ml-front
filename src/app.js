@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 const Router = require('./routes');
+const EnvConfiguration = require('./config/env_configuration');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/dist', express.static(path.join(__dirname, '../dist')));
 
 
 Router.configure(app);
+EnvConfiguration.load();
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

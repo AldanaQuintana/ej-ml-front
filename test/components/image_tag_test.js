@@ -7,7 +7,6 @@ const chai = require('chai'),
 
 describe('Image', () => {
   it('should render an image tag with src pointing to the assets server', () => {
-    process.env.IMAGE_HOST = 'http://localhost:8080';
     const image = shallow(<Image src="/image.jpg"/>);
 
     expect(image.find("img")).to.have.length(1);
