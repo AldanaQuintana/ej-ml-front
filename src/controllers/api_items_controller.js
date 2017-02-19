@@ -71,11 +71,17 @@ class ResponseDataBuilder {
 };
 
 const _withinCategoryFilter = (data, callback) => {
-  return callback(_.find(data.available_filters, (f) => { return f.id === 'category'; } ) || {});
+  return callback(_.find(data.filters, (f) => { return f.id === 'category'; } ) || {});
 }
 
 const _mapCategoryFilters = (categoryFilters) => {
-  return _.map(categoryFilters.values, (f) => { return f.name });
+  const filters = _.map(categoryFilters.values, (f) => {
+    return _.map(f.path_from_root, (category) => {
+      return category.name;
+    });
+  });
+
+  return _.flatten(filters);
 }
 
 const _getCategories = (data) => {

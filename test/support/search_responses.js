@@ -266,7 +266,27 @@ class SearchResponses {
               "name": "Higher price"
           }
       ],
-      "filters": [],
+      "filters": [{
+        "id": "category",
+        "name": "Categories",
+        "type": "text",
+        "values": [
+          {
+            "id": "MLA32089",
+            "name": "iPod",
+            "path_from_root": [
+              {
+              "id": "MLA1051",
+              "name": "Electrónica"
+              },
+              {
+                "id": "MLA32089",
+                "name": "iPod"
+              }
+            ]
+          }
+        ]
+      }],
       "available_filters": [
           {
               "id": "category",
@@ -1088,7 +1108,27 @@ class SearchResponses {
               "name": "Higher price"
           }
       ],
-      "filters": [],
+      "filters": [{
+        "id": "category",
+        "name": "Categories",
+        "type": "text",
+        "values": [
+          {
+            "id": "MLA12818",
+            "name": "iPod",
+            "path_from_root": [
+              {
+              "id": "MLA1051",
+              "name": "Electrónica"
+              },
+              {
+                "id": "MLA12818",
+                "name": "iPod"
+              }
+            ]
+          }
+        ]
+      }],
       "available_filters": [
           {
               "id": "category",
