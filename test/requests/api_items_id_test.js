@@ -47,7 +47,7 @@ describe('GET /api/items/:id', () =>{
             "price": {
               "currency": "ARS",
               "amount": 1690,
-              "decimals": 2
+              "decimals": "00"
             },
             "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
             "condition": "new",

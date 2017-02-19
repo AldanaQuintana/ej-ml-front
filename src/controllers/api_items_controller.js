@@ -2,7 +2,7 @@ const request = require('request'),
   ML_API_BASE = 'https://api.mercadolibre.com',
   _ = require('lodash');
 
-const PRICE_DECIMALS = 2,
+const PRICE_DECIMALS = "00",
  AUTHOR_NAME = "Aldana Laura",
  AUTHOR_LAST_NAME = "Quintana Munilla";
 

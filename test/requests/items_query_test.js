@@ -66,7 +66,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 1690,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
                 "condition": "new",
@@ -78,7 +78,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 6800,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s2-p.mlstatic.com/230021-MLA20681272445_042016-I.jpg",
                 "condition": "new",
@@ -90,7 +90,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 6590,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/243701-MLA20396016842_082015-I.jpg",
                 "condition": "new",
@@ -102,7 +102,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 4800,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/783215-MLA25157847807_112016-I.jpg",
                 "condition": "new",
@@ -114,7 +114,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 1139,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/931111-MLA20497417841_112015-I.jpg",
                 "condition": "new",
@@ -166,7 +166,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 1690,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
                 "condition": "new",
@@ -178,7 +178,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 6800,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s2-p.mlstatic.com/230021-MLA20681272445_042016-I.jpg",
                 "condition": "new",
@@ -190,7 +190,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 6590,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/243701-MLA20396016842_082015-I.jpg",
                 "condition": "new",
@@ -202,7 +202,7 @@ describe('GET /api/items?q=:query', () => {
                 "price": {
                   "currency": "ARS",
                   "amount": 4800,
-                  "decimals": 2
+                  "decimals": "00"
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/783215-MLA25157847807_112016-I.jpg",
                 "condition": "new",
