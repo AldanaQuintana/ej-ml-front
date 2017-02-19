@@ -7,8 +7,12 @@
   display: flex;
 }
 
+.item-card .img-column {
+  padding: 0 10px;
+}
+
 .item-card .desc-column {
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .item-card .desc-column .price {
@@ -27,7 +31,7 @@
 }
 
 .item-card img {
-  width: 160px;
+  width: 100px;
 }
 
 .item-card .title {
