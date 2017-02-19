@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBox from './SearchBox.jsx';
 import NavBar from './NavBar.jsx';
 import SearchResults from './SearchResults.jsx';
+import _ from 'lodash';
 import 'whatwg-fetch';
 
 const displayResultsLimit = 4;
@@ -9,7 +10,7 @@ const displayResultsLimit = 4;
 class ResultsPageApp extends React.Component{
   constructor(props){
     super(props);
-    this.state = { loading: true, items: [] }
+    this.state = { loading: true, items: [], categories: [] }
   }
 
   componentDidMount(){
@@ -17,12 +18,21 @@ class ResultsPageApp extends React.Component{
       .then((response) => {
         return response.json();
       }).then((json) => {
-        this.setState({loading: false, items: json.items});
+        this.setState({loading: false, items: json.items, categories: json.categories});
       });
   }
 
   render(){
-    return <span> <NavBar value={this.props.value} tooltipPosition="bottom" /> <SearchResults items={this.state.items} loading={this.state.loading}/></span>;
+    const categoriesToDisplay = _.take(this.state.categories, 4);
+    const breadCrumbs = _.map(categoriesToDisplay, (category) => {
+        return <div className="category">{category}</div>;
+      });
+
+    return <span>
+      <NavBar value={this.props.value} tooltipPosition="bottom" />
+      <div className="category-breadcrumbs">{ breadCrumbs }</div>
+      <SearchResults items={this.state.items} loading={this.state.loading}/>
+    </span>;
   }
 }
 

@@ -7,10 +7,29 @@
   margin-top: 30vh;
 }
 
-.items-results {
-  margin: 10px 0;
+.items-results, .category-breadcrumbs {
+  margin: 15px 0;
 
   @include breakpoint(tablet){
-    margin: 10px 20%;
+    margin: 15px 20%;
   }
+}
+
+.category-breadcrumbs .category {
+  display: inline-block;
+  color: $dark-gray;
+  margin-right: 10px;
+}
+
+.category-breadcrumbs .category:last-child {
+  font-weight: bold;
+}
+
+.category-breadcrumbs .category::after {
+  content: '>';
+  margin-left: 10px;
+}
+
+.category-breadcrumbs .category:last-child::after {
+  content: '';
 }
