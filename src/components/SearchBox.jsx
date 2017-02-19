@@ -17,7 +17,10 @@ class SearchBox extends React.Component{
   handleSubmit(event){
     if(!this.state.value){
       event.preventDefault();
-      this.setState({ buttonClass: 'active-tooltip top' });
+
+      let tooltipPosition = this.props.tooltipPosition || 'top';
+      this.setState({ buttonClass: 'active-tooltip ' + tooltipPosition  });
+
       if(this.queryInput){ this.queryInput.focus(); };
     }
   }

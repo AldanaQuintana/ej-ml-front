@@ -11,28 +11,49 @@
   content: attr(aria-label);
   display: inline-block;
   position: absolute;
-  top: -60px;
-  right: -35px;
+
   background-color: $secondary;
   color: $white;
   border: 1px solid $secondary;
   border-radius: $border-radius;
   padding: 0 10px;
   font-size: $md-font-size;
-  min-width: 121px;
+  height: 50px;
+  min-width: 120px;
   padding: 6px 10px;
 }
 
-.active-tooltip .tooltip:before{
+.active-tooltip .tooltip::before{
   content: '';
   display: block;
   width: 0;
   height: 0;
   position: absolute;
+  left: 42%;
+}
+
+.active-tooltip.top .tooltip {
+  top: -62px;
+  right: -35px;
+}
+
+.active-tooltip.top .tooltip::before{
   border-left: 10px solid transparent;
   border-top: 11px solid #3B4C99;
   border-bottom: 0 solid transparent;
-  left: 42%;
-  bottom: -12px;
   border-right: 11px solid transparent;
+  bottom: -12px;
+}
+
+.active-tooltip.bottom .tooltip {
+  bottom: -62px;
+  right: -35px;
+}
+
+.active-tooltip.bottom .tooltip::before{
+  border-left: 10px solid transparent;
+  border-top: 0 solid transparent;
+  border-bottom: 11px solid #3B4C99;
+  border-right: 11px solid transparent;
+  top: -12px;
 }

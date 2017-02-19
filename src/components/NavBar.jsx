@@ -6,7 +6,7 @@ class NavBar extends React.Component{
   render(){
     return <div className="navbar">
       <Image src="/src/images/logo-small-img.png" className="logo"/>
-      <div className="form-container"><SearchBox value={this.props.value} /></div>
+      <div className="form-container"><SearchBox value={this.props.value} tooltipPosition={this.props.tooltipPosition} /></div>
     </div>;
   }
 }
