@@ -22,7 +22,12 @@ class Price extends React.Component{
     let decimals = '';
 
     if (this.props.showDecimals) {
-      decimals = <div className="decimals">{this.props.value.decimals}</div>
+      let strDecimals = this.props.value.decimals.toString();
+      if ( strDecimals.length === 1 ){
+        strDecimals = strDecimals + "0";
+      }
+
+      decimals = <div className="decimals">{strDecimals}</div>
     }
 
     return <div className="price-group">
