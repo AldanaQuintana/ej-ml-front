@@ -20,20 +20,14 @@
   border-radius: $border-radius 0px 0px $border-radius;
   width: 80%;
   padding: 8px 31px 10px 31px;
-  font-size: $lg-font-size;
+  font-size: $md-font-size;
 
   @include breakpoint(tablet){
     width: 85%;
-    font-size: $lgr-font-size;
-  }
-
-  @include breakpoint(notebook){
-    font-size: $lg-font-size;
   }
 
   @include breakpoint(desktop){
     width: 70%;
-    font-size: $md-font-size;
   }
 }
 

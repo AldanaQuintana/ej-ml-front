@@ -1,9 +1,9 @@
 .item-detail {
   margin: 10px 5px;
-  padding: 10px 20px;
   background-color: $white;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
   @include breakpoint(notebook){
     margin: 10px 10%;
@@ -14,25 +14,13 @@
   }
 }
 
-.item-detail .picture-column{
-  width: 100%;
-  padding: 10px;
-
-  @include breakpoint(notebook){
-    width: 60%;
-  }
-
-  @include breakpoint(desktop){
-    width: 65%;
-  }
-}
-
 .item-detail .details-column{
   width: 100%;
-  padding: 10px;
+  padding: $sm-margin;
 
   @include breakpoint(notebook){
     width: 40%;
+    padding: $md-margin 0;
   }
 
   @include breakpoint(desktop){
@@ -41,55 +29,56 @@
 }
 
 .item-detail .description-group{
-  padding: 10px;
   width: 100%;
-  margin-top: 30px;
+  margin: $sm-margin;
+
+  @include breakpoint(notebook){
+    margin: 0px $md-margin;
+  }
 }
 
 .item-detail .description-group .description-title{
   font-size: $lg-font-size;
+  margin-bottom: $md-margin;
 }
 
 .item-detail .description-group .description{
-  margin-top: 10px;
-  color: $dark-gray;
+  margin-bottom: $md-margin;
+  color: $gray;
   font-size: $sm-font-size;
 }
 
 .item-detail .details-column .status-info{
   font-size: $sm-font-size;
-  color: $darker-gray;
 }
 
 .item-detail .details-column .title{
-  margin-top: 10px;
+  margin-top: $sm-margin;
   font-size: $lg-font-size;
 }
 
 .item-detail .details-column a.btn{
-  margin-top: 20px;
+  margin-right: $md-margin;
   display: block;
   text-align: center;
 }
 
 .item-detail .details-column .price-group{
   display: inline-block;
-  margin-top: 8px;
+  margin: $md-margin 0;
 }
 
 .item-detail .details-column .price-group .price{
-  font-size: 2.5em;
+  font-size: $lgst-font-size;
 }
 
 .item-detail .picture-column{
+  width: 680px;
+  padding: $sm-margin;
   text-align: center;
 }
 
 .item-detail .picture-column img{
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-
-  @include breakpoint(desktop){
-    width: 70%;
-  }
 }

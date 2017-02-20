@@ -9,7 +9,7 @@ class ItemCard extends React.Component{
 
     return <a className="item-card" href={`/items/${item.id}`}>
       <div className="img-column">
-        <img src={item.picture} />
+        <div className="image-container" style={ { "backgroundImage": `url(${item.picture})` } }></div>
       </div>
       <div className="desc-column">
         <Price value={item.price}/>

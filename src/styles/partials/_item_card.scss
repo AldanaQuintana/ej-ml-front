@@ -1,6 +1,6 @@
 .item-card {
   position: relative;
-  padding: 10px;
+  padding: $sm-margin;
   background-color: $white;
   border-bottom: 1px solid $border-color;
 
@@ -9,18 +9,24 @@
   text-decoration: none;
 }
 
-.item-card .img-column {
-  padding: 0 10px;
-}
-
 .item-card .desc-column {
-  padding: 10px 20px;
+  padding: $sm-margin 20px;
+  font-size: $md-font-size;
 }
 
-.item-card img {
-  width: 100px;
+.item-card .desc-column .price-group{
+  margin-top: calc(#{$sm-margin} + 10px);
+}
+
+.item-card .img-column .image-container {
+  width: 180px;
+  height: 180px;
+  border-radius: $border-radius;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .item-card .title {
-  margin-top: 7px;
+  margin-top: $md-margin;
+  font-size: $md-font-size;
 }

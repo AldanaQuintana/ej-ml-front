@@ -1,30 +1,35 @@
 // Colors
-$primary: #FFF059;
+$primary: #FFE600;
 $secondary: #3B4C99;
 $call-to-action: #3483FA;
 
+$white: #FFFFFF;
+$black: #333333;
+$gray: #666666;
+$darker-gray: #999999;
+$dark-gray: #666666;
+$light-gray: #EEE;
+$green: #20CD65;
+
 $border-color: #dddddd;
-$background-color: #EBEBEB;
+$background-color: $light-gray!default;
 $btn-gray-bkg-color: darken(#dddddd, 10%);
 $btn-gray-color: darken($btn-gray-bkg-color, 35%);
 
-$white: #FFFFFF;
-$black: #000;
-$light-gray: #dddddd;
-$gray: darken($light-gray, 10%);
-$dark-gray: darken($gray, 35%);
-$darker-gray: darken($gray, 50%);
-$green: #20CD65;
+// Margins
+$sm-margin: 16px;
+$md-margin: 32px;
 
 // Input properties
-$border-radius: 2px;
+$border-radius: 4px;
 
 // Font sizes
+$md-font-size: 18px;
 $base-font-size: 16px;
-$sm-font-size: 12px;
-$md-font-size: 15px;
-$lg-font-size: 20px;
-$lgr-font-size: 30px;
+$sm-font-size: 14px;
+$lgr-font-size: 28px;
+$lg-font-size: 24px;
+$lgst-font-size: 46px;
 
 // Navbar
 $nav-bar-height: 75px;
