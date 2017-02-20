@@ -2,6 +2,7 @@ import React from 'react';
 import Image from './Image.jsx';
 import Price from './Price.jsx';
 import FreeShippingIndicator from './FreeShippingIndicator.jsx';
+import LoadingIndicator from './LoadingIndicator.jsx';
 
 class ItemCard extends React.Component{
   constructor(props){
@@ -20,7 +21,7 @@ class ItemCard extends React.Component{
 
   render(){
     const item = this.props.item;
-    let imageItem = <div className="image-placeholder"><div className="micro-image" style={ { "backgroundImage": `url(${item.picture})` } }></div></div>;
+    let imageItem = <div className="image-placeholder"><LoadingIndicator /></div>;
 
     if(this.state.image){
       imageItem = <div className="image-container" style={ { "backgroundImage": `url(${this.state.image})` } }></div>;

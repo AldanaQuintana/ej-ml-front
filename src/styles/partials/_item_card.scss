@@ -21,6 +21,16 @@
 .item-card .img-column .image-placeholder{
   width: 180px;
   height: 180px;
+  padding: 90px 20px;
+}
+
+.item-card .img-column .image-placeholder .loading-indicator{
+  margin: 0px;
+}
+
+.item-card .img-column .image-placeholder .loading-indicator > div{
+  width: 10px;
+  height: 10px;
 }
 
 .item-card .img-column .image-placeholder .micro-image{
