@@ -30,6 +30,7 @@ class ResultsPageApp extends React.Component{
   }
 
   componentDidMount(){
+    document.title = `${_.capitalize(this.props.value)} en Mercado Libre`;
     let encodedValue = removeAccents(this.props.value);
 
     fetch(`/api/items?q=${encodedValue}&limit=${displayResultsLimit}`)

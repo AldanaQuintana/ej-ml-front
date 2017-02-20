@@ -11,10 +11,12 @@ class ItemPageApp extends React.Component{
   }
 
   componentDidMount(){
+
     fetch(`/api/items/${this.props.itemId}`)
       .then((response) => {
         return response.json();
       }).then((json) => {
+        document.title = `${json.item.title} - Mercado Libre`;
         this.setState({ item: json.item });
       });
   }
