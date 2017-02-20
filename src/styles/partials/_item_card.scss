@@ -5,12 +5,12 @@
   border-bottom: 1px solid $border-color;
 
   display: flex;
-  color: $darker-gray;
+  color: $gray;
   text-decoration: none;
 }
 
 .item-card .desc-column {
-  padding: $sm-margin 20px;
+  padding: 0px $sm-margin;
   font-size: $md-font-size;
 }
 
