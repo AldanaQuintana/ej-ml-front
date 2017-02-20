@@ -1,12 +1,11 @@
 import React from 'react';
 import Image from './Image.jsx';
 import Price from './Price.jsx';
+import FreeShippingIndicator from './FreeShippingIndicator.jsx';
 
 class ItemCard extends React.Component{
   render(){
     const item = this.props.item;
-
-    const freeShippingIndicator = item.free_shipping ? <div className="icon-truck"></div> : '';
 
     return <a className="item-card" href={`/items/${item.id}`}>
       <div className="img-column">
@@ -14,7 +13,7 @@ class ItemCard extends React.Component{
       </div>
       <div className="desc-column">
         <Price value={item.price}/>
-        { freeShippingIndicator }
+        <FreeShippingIndicator freeShipping={item.free_shipping}/>
         <div className='title'>{item.title}</div>
       </div>
     </a>;

@@ -17,16 +17,6 @@
   padding: 10px 20px;
 }
 
-.item-card .desc-column .icon-truck {
-  display: inline-block;
-  margin-left: 10px;
-  color: $white;
-  text-align: center;
-  @include circle(25px, $green);
-  padding: 4px;
-  font-size: $base-font-size;
-}
-
 .item-card img {
   width: 100px;
 }

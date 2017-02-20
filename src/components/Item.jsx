@@ -1,5 +1,6 @@
 import React from 'react';
 import Price from './Price.jsx';
+import FreeShippingIndicator from './FreeShippingIndicator.jsx';
 
 const statusTranslator = {
   'new': 'Nuevo',
@@ -23,6 +24,7 @@ class Item extends React.Component{
         <div className="status-info">{statusInfo}</div>
         <div className="title">{item.title}</div>
         <Price value={item.price} showDecimals={true}/>
+        <FreeShippingIndicator freeShipping={item.free_shipping}/>
         <br/><a href="#" className="btn btn-primary">Comprar</a>
       </div>
       <div className="description-group">
