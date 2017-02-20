@@ -33,7 +33,7 @@ describe('SearchResults', () => {
       const searchResults = shallow(<SearchResults items={[]} loading={false}/>);
 
       expect(searchResults.find("ItemCard")).to.have.length(0);
-      expect(searchResults.find('.loading-indicator')).to.have.length(0);
+      expect(searchResults.find('LoadingIndicator')).to.have.length(0);
       expect(searchResults.find('.no-results-text').text()).to.eql('No hay resultados para la búsqueda');
     });
   });
@@ -44,7 +44,7 @@ describe('SearchResults', () => {
 
       expect(searchResults.find("ItemCard")).to.have.length(0);
       expect(searchResults.find('.no-results-text')).to.have.length(0);
-      expect(searchResults.find('.loading-indicator')).to.have.length(1);
+      expect(searchResults.find('LoadingIndicator')).to.have.length(1);
     });
   });
 
@@ -53,7 +53,7 @@ describe('SearchResults', () => {
       const searchResults = shallow(<SearchResults items={itemsResult} loading={false}/>);
 
       expect(searchResults.find("ItemCard")).to.have.length(2);
-      expect(searchResults.find('.loading-indicator')).to.have.length(0);
+      expect(searchResults.find('LoadingIndicator')).to.have.length(0);
       expect(searchResults.find('.no-results-text')).to.have.length(0);
     });
   });

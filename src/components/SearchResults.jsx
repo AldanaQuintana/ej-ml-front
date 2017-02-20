@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCard from './ItemCard.jsx';
+import LoadingIndicator from './LoadingIndicator.jsx';
 
 class SearchResults extends React.Component{
   render(){
@@ -11,11 +12,7 @@ class SearchResults extends React.Component{
     if(content.length === 0 && !loading){
       content = <div className='no-results-text'>No hay resultados para la búsqueda</div>
     } else if(loading){
-      content = <div className='loading-indicator center-vh'>
-        <div className="bounce1"></div>
-        <div className="bounce2"></div>
-        <div className="bounce3"></div>
-      </div>;
+      content = <LoadingIndicator />;
     }
 
     return <div className="items-results">
