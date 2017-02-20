@@ -4,12 +4,31 @@ import Price from './Price.jsx';
 import FreeShippingIndicator from './FreeShippingIndicator.jsx';
 
 class ItemCard extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = { image: '' }
+  }
+
+  componentDidMount(){
+    fetch(`/api/items/${this.props.item.id}`)
+      .then((response) => {
+        return response.json();
+      }).then((json) => {
+        this.setState({ image: json.item.picture });
+      });
+  }
+
   render(){
     const item = this.props.item;
+    let imageItem = <div className="image-placeholder"><div className="micro-image" style={ { "backgroundImage": `url(${item.picture})` } }></div></div>;
+
+    if(this.state.image){
+      imageItem = <div className="image-container" style={ { "backgroundImage": `url(${this.state.image})` } }></div>;
+    }
 
     return <a className="item-card" href={`/items/${item.id}`}>
       <div className="img-column">
-        <div className="image-container" style={ { "backgroundImage": `url(${item.picture})` } }></div>
+        { imageItem }
       </div>
       <div className="desc-column">
         <Price value={item.price}/>
