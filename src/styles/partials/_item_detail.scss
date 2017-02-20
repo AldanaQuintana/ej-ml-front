@@ -15,6 +15,10 @@
   padding: 10px;
 
   @include breakpoint(notebook){
+    width: 60%;
+  }
+
+  @include breakpoint(desktop){
     width: 75%;
   }
 }
@@ -24,6 +28,10 @@
   padding: 10px;
 
   @include breakpoint(notebook){
+    width: 40%;
+  }
+
+  @include breakpoint(desktop){
     width: 25%;
   }
 }
@@ -31,6 +39,7 @@
 .item-detail .description-group{
   padding: 10px;
   width: 100%;
+  margin-top: 30px;
 }
 
 .item-detail .description-group .description-title{
@@ -61,11 +70,11 @@
 
 .item-detail .details-column .price-group{
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .item-detail .details-column .price-group .price{
-  font-size: $lgr-font-size;
+  font-size: 2.5em;
 }
 
 .item-detail .picture-column{

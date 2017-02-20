@@ -15,7 +15,13 @@ const _parseItem = (itemData) => {
     "amount": parseInt(itemData.price),
     "decimals": parseInt(itemData.price.toString().split(".")[1]) || 0
   };
-  parsedItem.picture = itemData.thumbnail;
+
+  if(itemData.pictures && itemData.pictures.length > 0){
+    parsedItem.picture =  itemData.pictures[0].url;
+  }else{
+    parsedItem.picture =  itemData.thumbnail;
+  }
+
   parsedItem.condition = itemData.condition;
   parsedItem.free_shipping = itemData.shipping.free_shipping;
 

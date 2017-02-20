@@ -49,7 +49,7 @@ describe('GET /api/items/:id', () =>{
               "amount": 1690,
               "decimals": 0
             },
-            "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
+            "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-O.jpg",
             "condition": "new",
             "free_shipping": true,
             "sold_quantity": 173,
