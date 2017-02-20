@@ -30,7 +30,8 @@ describe('ItemCard', () => {
       expect(itemCard.find("Price")).to.have.length(1);
       expect(itemCard.find("Price").props().value).to.eql(item.price);
 
-      expect(itemCard.find(".icon-truck")).to.have.length(1);
+      expect(itemCard.find("FreeShippingIndicator")).to.have.length(1);
+      expect(itemCard.find("FreeShippingIndicator").props().freeShipping).to.eq(true);
 
       expect(itemCard.find(".title")).to.have.length(1);
       expect(itemCard.find(".title").text()).to.eql(item.title);
@@ -53,7 +54,8 @@ describe('ItemCard', () => {
       expect(itemCard.find("Price")).to.have.length(1);
       expect(itemCard.find("Price").props().value).to.eql(item.price);
 
-      expect(itemCard.find(".icon-truck")).to.have.length(0);
+      expect(itemCard.find("FreeShippingIndicator")).to.have.length(1);
+      expect(itemCard.find("FreeShippingIndicator").props().freeShipping).to.eq(false);
 
       expect(itemCard.find(".title")).to.have.length(1);
       expect(itemCard.find(".title").text()).to.eql(item.title);
