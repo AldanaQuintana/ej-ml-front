@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 
   @include breakpoint(notebook){
+    margin: 10px 10%;
+  }
+
+  @include breakpoint(desktop){
     margin: 10px 20%;
   }
 }
@@ -19,7 +23,7 @@
   }
 
   @include breakpoint(desktop){
-    width: 75%;
+    width: 65%;
   }
 }
 
@@ -82,6 +86,10 @@
 }
 
 .item-detail .picture-column img{
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
+
+  @include breakpoint(desktop){
+    width: 70%;
+  }
 }

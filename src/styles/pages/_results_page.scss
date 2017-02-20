@@ -27,6 +27,11 @@
   display: inline-block;
   color: $dark-gray;
   margin-right: 10px;
+  font-size: $sm-font-size;
+
+  @include breakpoint(tablet){
+    font-size: $base-font-size;
+  }
 }
 
 .category-breadcrumbs .category:last-child {
