@@ -2,11 +2,13 @@ import React from 'react';
 
 class MetaDescription extends React.Component{
   componentDidMount(){
-    document.getElementById('meta-desc').content = this.props.content;
+    if(this.props.content && this.props.content.length > 0){
+      document.getElementById('meta-desc').content = this.props.content;
+    }
   }
 
   render(){
-    return <div></div>;
+    return <span></span>;
   }
 }
 

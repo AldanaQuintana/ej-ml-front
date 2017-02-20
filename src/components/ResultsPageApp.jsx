@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBox from './SearchBox.jsx';
 import NavBar from './NavBar.jsx';
 import SearchResults from './SearchResults.jsx';
+import MetaDescription from './MetaDescription.jsx';
 import _ from 'lodash';
 import 'whatwg-fetch';
 
@@ -46,10 +47,13 @@ class ResultsPageApp extends React.Component{
         return <div className="category" key={category}>{category}</div>;
       });
 
+    const metaDescription = this.state.items.length > 0 ? <MetaDescription content={`${_.capitalize(this.props.value)} en Mercado Libre. ¡Comprá ya la mejor oferta!`}/> : '';
+
     return <span>
       <NavBar value={this.props.value} tooltipPosition="bottom" />
       <div className="category-breadcrumbs">{ breadCrumbs }</div>
       <SearchResults items={this.state.items} loading={this.state.loading}/>
+      { metaDescription }
     </span>;
   }
 }
