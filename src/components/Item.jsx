@@ -15,14 +15,20 @@ class Item extends React.Component{
 
     let statusInfo = `${statusTranslator[item.condition]} - ${item.sold_quantity} vendidos`;
 
-    return <div>
-      <img src={item.picture} />
-      <div className="status-info">{statusInfo}</div>
-      <div className="title">{item.title}</div>
-      <Price value={item.price} />
-      <a href="#">Comprar</a>
-      <div className="description-title">Descripción del producto</div>
-      <div className="description">{item.description}</div>
+    return <div className="item-detail">
+      <div className="picture-column">
+        <img src={item.picture} />
+      </div>
+      <div className="details-column">
+        <div className="status-info">{statusInfo}</div>
+        <div className="title">{item.title}</div>
+        <Price value={item.price} showDecimals={true}/>
+        <br/><a href="#" className="btn btn-primary">Comprar</a>
+      </div>
+      <div className="description-group">
+        <div className="description-title">Descripción del producto</div>
+        <div className="description">{item.description}</div>
+      </div>
     </div>;
   }
 }

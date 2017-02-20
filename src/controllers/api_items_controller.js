@@ -102,7 +102,7 @@ const _parseItems = (data) => {
 const _parseSingleItemWithDesc = (itemData, descData) => {
   return new ResponseDataBuilder().setItem(_parseItem(itemData))
     .setItemSoldQuantity(itemData.sold_quantity)
-    .setItemDescription(descData.text)
+    .setItemDescription(descData.plain_text)
     .build();
 }
 

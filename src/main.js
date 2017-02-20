@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SearchPageApp from './components/SearchPageApp.jsx';
 import ResultsPageApp from './components/ResultsPageApp.jsx';
+import ItemPageApp from './components/ItemPageApp.jsx';
 import _ from 'lodash';
 
 
@@ -16,7 +17,8 @@ if ( searchRegex.test(searchQuery) ){
 
 const apps = {
   "search-page": <SearchPageApp />,
-  "results-page": <ResultsPageApp value={searchParam} />
+  "results-page": <ResultsPageApp value={searchParam} />,
+  "item-page": <ItemPageApp itemId={window.location.pathname.split("/items/")[1]} />
 };
 
 _.each(apps, function(app, nodeId){

@@ -1,0 +1,78 @@
+.item-detail {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: $white;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpoint(notebook){
+    margin: 10px 20%;
+  }
+}
+
+.item-detail .picture-column{
+  width: 100%;
+  padding: 10px;
+
+  @include breakpoint(notebook){
+    width: 75%;
+  }
+}
+
+.item-detail .details-column{
+  width: 100%;
+  padding: 10px;
+
+  @include breakpoint(notebook){
+    width: 25%;
+  }
+}
+
+.item-detail .description-group{
+  padding: 10px;
+  width: 100%;
+}
+
+.item-detail .description-group .description-title{
+  font-size: $lg-font-size;
+}
+
+.item-detail .description-group .description{
+  margin-top: 10px;
+  color: $dark-gray;
+  font-size: $sm-font-size;
+}
+
+.item-detail .details-column .status-info{
+  font-size: $sm-font-size;
+  color: $darker-gray;
+}
+
+.item-detail .details-column .title{
+  margin-top: 10px;
+  font-size: $lg-font-size;
+}
+
+.item-detail .details-column a.btn{
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+
+.item-detail .details-column .price-group{
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.item-detail .details-column .price-group .price{
+  font-size: $lgr-font-size;
+}
+
+.item-detail .picture-column{
+  text-align: center;
+}
+
+.item-detail .picture-column img{
+  width: 50%;
+  margin: 0 auto;
+}

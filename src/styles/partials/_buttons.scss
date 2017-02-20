@@ -1,3 +1,13 @@
 button {
   font-size: $md-font-size;
 }
+
+.btn.btn-primary{
+  font-size: $md-font-size;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: $call-to-action;
+  display: inline-block;
+  border-radius: $border-radius;
+}

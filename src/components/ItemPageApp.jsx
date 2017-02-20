@@ -9,6 +9,15 @@ class ItemPageApp extends React.Component{
     this.state = { item: null }
   }
 
+  componentDidMount(){
+    fetch(`/api/items/${this.props.itemId}`)
+      .then((response) => {
+        return response.json();
+      }).then((json) => {
+        this.setState({ item: json.item });
+      });
+  }
+
   render(){
     let breadCrumbs = '';
 

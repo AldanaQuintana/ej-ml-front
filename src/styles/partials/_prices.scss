@@ -4,8 +4,12 @@
 
 .price-group .price {
   font-size: $lg-font-size;
+  display: inline-block;
 }
 
 .price-group .decimals {
-
+  display: inline-block;
+  font-size: 0.9em;
+  position: relative;
+  top: -8px;
 }
