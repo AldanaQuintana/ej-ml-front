@@ -24,7 +24,7 @@ describe('ItemCard', () => {
 
       expect(itemCard.find("a[href='/items/MLA621653626']")).to.have.length(1);
 
-      expect(itemCard.find(".image-container")).to.have.length(1);
+      expect(itemCard.find(".image-placeholder")).to.have.length(1);
 
       expect(itemCard.find("Price")).to.have.length(1);
       expect(itemCard.find("Price").props().value).to.eql(item.price);
@@ -47,7 +47,7 @@ describe('ItemCard', () => {
 
       expect(itemCard.find("a[href='/items/MLA621653626']")).to.have.length(1);
 
-      expect(itemCard.find(".image-container")).to.have.length(1);
+      expect(itemCard.find(".image-placeholder")).to.have.length(1);
 
       expect(itemCard.find("Price")).to.have.length(1);
       expect(itemCard.find("Price").props().value).to.eql(item.price);
