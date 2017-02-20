@@ -38,14 +38,14 @@
 }
 
 .item-detail .description-group .description-title{
-  font-size: $lg-font-size;
+  font-size: $lgr-font-size;
   margin-bottom: $md-margin;
 }
 
 .item-detail .description-group .description{
   margin-bottom: $md-margin;
+  font-size: $base-font-size;
   color: $gray;
-  font-size: $sm-font-size;
 }
 
 .item-detail .details-column .status-info{
