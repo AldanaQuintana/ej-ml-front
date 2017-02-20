@@ -16,6 +16,13 @@ class Item extends React.Component{
 
     let statusInfo = `${statusTranslator[item.condition]} - ${item.sold_quantity} vendidos`;
 
+    let itemDescription = <div className="description-group">
+      <div className="description-title">Descripción del producto</div>
+      <div className="description">{item.description}</div>
+    </div>;
+
+    if(item.description.length === 0){ itemDescription = ''; }
+
     return <div className="item-detail">
       <div className="picture-column">
         <img src={item.picture} />
@@ -27,10 +34,7 @@ class Item extends React.Component{
         <FreeShippingIndicator freeShipping={item.free_shipping}/>
         <br/><a href="#" className="btn btn-primary">Comprar</a>
       </div>
-      <div className="description-group">
-        <div className="description-title">Descripción del producto</div>
-        <div className="description">{item.description}</div>
-      </div>
+      { itemDescription }
     </div>;
   }
 }
