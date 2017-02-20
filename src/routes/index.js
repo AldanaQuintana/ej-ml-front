@@ -7,6 +7,12 @@ class Router {
   static configure(app){
     app.use('/', homeRouter);
 
+
+    app.get('/robots.txt', function(req, res){
+      res.type('text/plain')
+      res.send("User-agent: *\nAllow: /");
+    });
+
     app.use('/items', itemsRouter);
 
     app.use('/api/items', apiItemsRouter);
