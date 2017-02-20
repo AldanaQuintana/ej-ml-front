@@ -5,23 +5,14 @@
   flex-wrap: wrap;
   justify-content: space-around;
 
-  @include breakpoint(notebook){
-    margin: 10px 10%;
-  }
-
   @include breakpoint(desktop){
-    margin: 10px 20%;
+    margin: 10px 10%;
   }
 }
 
 .item-detail .details-column{
   width: 100%;
   padding: $sm-margin;
-
-  @include breakpoint(notebook){
-    width: 40%;
-    padding: $md-margin 0;
-  }
 
   @include breakpoint(desktop){
     width: 25%;
@@ -32,7 +23,7 @@
   width: 100%;
   margin: $sm-margin;
 
-  @include breakpoint(notebook){
+  @include breakpoint(desktop){
     margin: 0px $md-margin;
   }
 }
@@ -58,9 +49,13 @@
 }
 
 .item-detail .details-column a.btn{
-  margin-right: $md-margin;
   display: block;
   text-align: center;
+  margin: 0;
+
+  @include breakpoint(desktop){
+    margin-right: $md-margin;
+  }
 }
 
 .item-detail .details-column .price-group{
