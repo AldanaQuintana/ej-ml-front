@@ -24,6 +24,7 @@ const _parseItem = (itemData) => {
 
   parsedItem.condition = itemData.condition;
   parsedItem.free_shipping = itemData.shipping.free_shipping;
+  parsedItem.seller_address = itemData.seller_address.state.name;
 
   return parsedItem;
 };

@@ -52,6 +52,7 @@ describe('GET /api/items/:id', () =>{
             "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-O.jpg",
             "condition": "new",
             "free_shipping": true,
+            "seller_address": "Capital Federal",
             "sold_quantity": 173,
             "description": "iPod Shuffle utima generacion! Nuevos en caja sellada! EXCLUSIVE TECHNOLOGY ARGENTINA - 10 años en el Rubro de electronica y comunicaciones! Compre seguro!"
           }

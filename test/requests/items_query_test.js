@@ -70,7 +70,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
                 "condition": "new",
-                "free_shipping": true
+                "free_shipping": true,
+                "seller_address": "Capital Federal"
               },
               {
                 "id": "MLA617433172",
@@ -82,7 +83,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s2-p.mlstatic.com/230021-MLA20681272445_042016-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Río Negro"
               },
               {
                 "id": "MLA615400378",
@@ -94,7 +96,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/243701-MLA20396016842_082015-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Buenos Aires"
               },
               {
                 "id": "MLA627480393",
@@ -106,7 +109,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/783215-MLA25157847807_112016-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Capital Federal"
               },
               {
                 "id": "MLA619743680",
@@ -118,7 +122,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/931111-MLA20497417841_112015-I.jpg",
                 "condition": "new",
-                "free_shipping": true
+                "free_shipping": true,
+                "seller_address": "Capital Federal"
               }
             ]
           });
@@ -170,7 +175,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
                 "condition": "new",
-                "free_shipping": true
+                "free_shipping": true,
+                "seller_address": "Capital Federal"
               },
               {
                 "id": "MLA617433172",
@@ -182,7 +188,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s2-p.mlstatic.com/230021-MLA20681272445_042016-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Río Negro"
               },
               {
                 "id": "MLA615400378",
@@ -194,7 +201,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/243701-MLA20396016842_082015-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Buenos Aires"
               },
               {
                 "id": "MLA627480393",
@@ -206,7 +214,8 @@ describe('GET /api/items?q=:query', () => {
                 },
                 "picture": "http://mla-s1-p.mlstatic.com/783215-MLA25157847807_112016-I.jpg",
                 "condition": "new",
-                "free_shipping": false
+                "free_shipping": false,
+                "seller_address": "Capital Federal"
               }
             ]
           });
