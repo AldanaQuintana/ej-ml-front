@@ -20,10 +20,14 @@
 
 .item-card .desc-column .address{
   display: inline-block;
-  position: absolute;
-  top: calc(#{$md-margin} + #{$sm-margin});
-  right: 10%;
   font-size: $micro-font-size;
+  position: relative;
+
+  @include breakpoint(tablet){
+    position: absolute;
+    top: calc(#{$md-margin} + #{$sm-margin});
+    right: 10%;
+  }
 }
 
 .item-card .img-column .image-placeholder{
