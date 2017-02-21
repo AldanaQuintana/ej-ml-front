@@ -60,4 +60,19 @@ describe('Price', () => {
     expect(price.find(".decimals")).to.have.length(1);
     expect(price.find(".decimals").text()).to.eql('10');
   });
+
+  describe('when price is not present', () =>{
+    it('', () => {
+      const price = shallow(<Price value={ {
+        "currency": "ARS",
+        "amount": null,
+        "decimals": null
+      } } showDecimals={true} />);
+
+      expect(price.find(".price")).to.have.length(1);
+      expect(price.find(".price").text()).to.eql('Consultar Precio');
+
+      expect(price.find(".decimals")).to.have.length(0);
+    });
+  });
 });

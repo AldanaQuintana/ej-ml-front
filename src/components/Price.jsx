@@ -21,7 +21,7 @@ class Price extends React.Component{
   render(){
     let decimals = '';
 
-    if (this.props.showDecimals) {
+    if (this.props.value.amount && this.props.showDecimals) {
       let strDecimals = this.props.value.decimals.toString();
       if ( strDecimals.length === 1 ){
         strDecimals = strDecimals + "0";
@@ -30,8 +30,15 @@ class Price extends React.Component{
       decimals = <div className="decimals">{strDecimals}</div>
     }
 
+    let price = '';
+    if(this.props.value.amount){
+      price = this.formattedPrice();
+    }else{
+      price = 'Consultar Precio';
+    }
+
     return <div className="price-group">
-      <div className="price">{this.formattedPrice()}</div>
+      <div className="price">{price}</div>
       { decimals }
     </div>;
   }
