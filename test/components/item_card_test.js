@@ -13,7 +13,8 @@ let item = {"id": "MLA621653626",
                 },
   "picture": "http://mla-s1-p.mlstatic.com/462621-MLA20808018617_072016-I.jpg",
   "condition": "new",
-  "free_shipping": true
+  "free_shipping": true,
+  "seller_address": "Capital Federal"
 };
 
 
@@ -34,6 +35,9 @@ describe('ItemCard', () => {
 
       expect(itemCard.find(".title")).to.have.length(1);
       expect(itemCard.find(".title").text()).to.eql(item.title);
+
+      expect(itemCard.find(".address")).to.have.length(1);
+      expect(itemCard.find(".address").text()).to.eql(item.seller_address);
     });
   });
 
@@ -57,6 +61,9 @@ describe('ItemCard', () => {
 
       expect(itemCard.find(".title")).to.have.length(1);
       expect(itemCard.find(".title").text()).to.eql(item.title);
+
+      expect(itemCard.find(".address")).to.have.length(1);
+      expect(itemCard.find(".address").text()).to.eql(item.seller_address);
     });
   });
 });

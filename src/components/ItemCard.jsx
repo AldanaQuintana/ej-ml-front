@@ -35,6 +35,7 @@ class ItemCard extends React.Component{
         <Price value={item.price}/>
         <FreeShippingIndicator freeShipping={item.free_shipping}/>
         <div className='title'>{item.title}</div>
+        <div className='address'>{item.seller_address}</div>
       </div>
     </a>;
   }
