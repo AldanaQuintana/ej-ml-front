@@ -12,8 +12,8 @@ const _parseItem = (itemData) => {
   parsedItem.title = itemData.title;
   parsedItem.price = {
     "currency": itemData.currency_id,
-    "amount": parseInt(itemData.price),
-    "decimals": parseInt(itemData.price.toString().split(".")[1]) || 0
+    "amount": parseInt(itemData.price) || null,
+    "decimals": itemData.price ? parseInt(itemData.price.toString().split(".")[1]) || 0 : 0
   };
 
   if(itemData.pictures && itemData.pictures.length > 0){
