@@ -21,7 +21,7 @@ class Item extends React.Component{
       <div className="description">{item.description}</div>
     </div>;
 
-    if(item.description.length === 0){ itemDescription = ''; }
+    if(!item.description || item.description.length === 0){ itemDescription = ''; }
 
     return <div className="item-detail">
       <div className="picture-column">
