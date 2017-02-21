@@ -18,6 +18,14 @@
   margin-top: calc(#{$sm-margin} + 10px);
 }
 
+.item-card .desc-column .address{
+  display: inline-block;
+  position: absolute;
+  top: calc(#{$md-margin} + #{$sm-margin});
+  right: 10%;
+  font-size: $micro-font-size;
+}
+
 .item-card .img-column .image-placeholder{
   width: 180px;
   height: 180px;
